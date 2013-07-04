@@ -22,7 +22,16 @@ section#browse p:nth-of-type(1){float:right;position:relative;top:-30px;font-siz
 section#browse p:nth-of-type(1) a{color:#cbc5be;text-decoration:none;border-bottom:1px solid #cbc5be}
 section#browse p:nth-of-type(1) a:hover{color:#fff;border-bottom:1px solid #fff}
 section#browse>ul:nth-of-type(1){padding:0;}
-section#browse>ul:nth-of-type(1) li{list-style-type:none;width:222px}
+section#browse>ul:nth-of-type(1) li{list-style-type:none;width:222px;}
+section#browse>ul:nth-of-type(1) li h2{text-align:center;font-size:12px;font-weight:normal}
+section#browse>ul:nth-of-type(1) li ul{background-color:#a6a19b;-webkit-border-radius:5px;border-radius:5px;color:#222;position:relative;z-index:1;padding:0;}
+section#browse>ul:nth-of-type(1) li ul li{background-image:url("../images/comment-divider.png");background-position:bottom left;background-repeat:no-repeat;padding:5px;font-size:11px;line-height:20px}
+section#browse>ul:nth-of-type(1) li ul li:last-child{background-image:none}
+section#browse>ul:nth-of-type(1) li ul:before{content:'';position:absolute;z-index:-1;top:-9px;left:10px;right:0;width:11px;height:11px;background-image:url("../images/comment-arrow.png")}
+section#browse>ul:nth-of-type(1) li ul:after{content:'';position:absolute;z-index:-1;top:0;left:0;right:0;bottom:-1px;border-bottom:1px solid #000;-webkit-border-radius:5px;border-radius:5px}
+section#browse>ul:nth-of-type(1) li>div{position:absolute;width:100%;background-color:rgba(203,197,190,0.6);height:30px;line-height:30px;color:#eee;text-shadow:0 1px 1px #000,0 0 10px #000;}
+section#browse>ul:nth-of-type(1) li>div a:first-child{display:inline-block;width:16px;height:16px;background:url("../images/heart.png");text-indent:100%;white-space:nowrap;overflow:hidden;margin-left:5px;margin-right:5px;float:left;height:100%;background-position:center center;background-repeat:no-repeat}
+section#browse>ul:nth-of-type(1) li>div a:last-child{display:inline-block;width:16px;height:16px;background:url("../images/share.png");text-indent:100%;white-space:nowrap;overflow:hidden;float:right;height:100%;background-position:center center;background-repeat:no-repeat;margin-right:5px}
 .ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}
 .ir:before{content:"";display:block;width:0;height:100%}
 .hidden{display:none !important;visibility:hidden}

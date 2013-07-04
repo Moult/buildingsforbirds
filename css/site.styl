@@ -34,12 +34,12 @@ body
 
 header
     h1
-        width: 271px;
-        height: 44px;
-        background: url('../images/buildings-for-birds.png');
-        text-indent: 100%;
-        white-space: nowrap;
-        overflow: hidden;
+        width 271px
+        height 44px
+        background url('../images/buildings-for-birds.png')
+        text-indent 100%
+        white-space nowrap
+        overflow hidden
         float left
         margin-top 30px
     div
@@ -124,3 +124,80 @@ section#browse>ul:nth-of-type(1)
         li
             list-style-type none
             width 222px
+            h2
+                text-align center
+                font-size 12px
+                font-weight normal
+            ul
+                background-color #a6a19b
+                -webkit-border-radius 5px
+                border-radius 5px
+                color #222
+                position relative
+                z-index 1
+                padding 0px
+                li
+                    background-image url('../images/comment-divider.png')
+                    background-position bottom left
+                    background-repeat no-repeat
+                    padding 5px
+                    font-size 11px
+                    line-height 20px
+                li:last-child
+                    background-image none
+            ul:before
+                content ''
+                position absolute
+                z-index -1
+                top -9px
+                left 10px
+                right 0px
+                width 11px
+                height 11px
+                background-image url('../images/comment-arrow.png')
+            ul:after
+                content ''
+                position absolute
+                z-index -1
+                top 0px
+                left 0px
+                right 0px
+                bottom -1px
+                border-bottom 1px solid #000
+                -webkit-border-radius 5px
+                border-radius 5px
+        li>div
+            position absolute
+            width 100%
+            background-color rgba(203, 197, 190, 0.6)
+            height 30px
+            line-height 30px
+            color #eeeeee
+            text-shadow 0px 1px 1px #000000, 0px 0px 10px #000000
+            a:first-child
+                display inline-block
+                width 16px
+                height 16px
+                background url('../images/heart.png')
+                text-indent 100%
+                white-space nowrap
+                overflow hidden
+                margin-left 5px
+                margin-right 5px
+                float left
+                height 100%
+                background-position center center
+                background-repeat no-repeat
+            a:last-child
+                display inline-block
+                width 16px
+                height 16px
+                background url('../images/share.png')
+                text-indent 100%
+                white-space nowrap
+                overflow hidden
+                float right
+                height 100%
+                background-position center center
+                background-repeat no-repeat
+                margin-right 5px
