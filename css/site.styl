@@ -1,3 +1,121 @@
 /**
  * Site specific CSS
  */
+
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+
+gradient(colorone colortwo)
+    background colorone
+    background -moz-linear-gradient(top,  colorone 0%, colortwo 100%)
+    background -webkit-gradient(linear, left top, left bottom, color-stop(0%,colorone), color-stop(100%,colortwo))
+    background -webkit-linear-gradient(top,  colorone 0%,colortwo 100%)
+    background -o-linear-gradient(top,  colorone 0%,colortwo 100%)
+    background -ms-linear-gradient(top,  colorone 0%,colortwo 100%)
+    background linear-gradient(to bottom,  colorone 0%,colortwo 100%)
+    filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr=%s, endColorstr=%s,GradientType=0 )' % (colorone colortwo)
+
+boxshadow(distance colorhex)
+    -webkit-box-shadow 0px 0px distance 0px colorhex
+    -moz-box-shadow 0px 0px distance 0px colorhex
+    -o-box-shadow 0px 0px distance 0px colorhex
+    box-shadow 0px 0px distance 0px colorhex
+
+body
+    background-color #141210
+    background-image url('../images/background-glow.png')
+    background-position  top center
+    background-repeat no-repeat
+    width 978px
+    margin-left auto
+    margin-right auto
+    color #cbc5be
+    font-family 'Arial', sans-serif
+    font-size 14px
+
+header
+    h1
+        width: 271px;
+        height: 44px;
+        background: url('../images/buildings-for-birds.png');
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        float left
+        margin-top 30px
+    div
+        margin-top 30px
+        float right
+    aside
+        content ''
+        min-height 20px
+        position absolute
+        left 0px
+        width 100%
+        background-color #F00
+        border-bottom 1px solid #24211e
+        gradient(#141210, #0e0b06)
+        z-index 1
+        boxshadow(15px, #000000)
+    aside:before
+        content ''
+        position absolute
+        z-index -1
+        top 0px
+        left 0px
+        right 0px
+        bottom -2px
+        border-bottom 1px solid #141210
+
+section#intro
+    clear both
+    h1
+        background-image url('../images/intro-top.png')
+        font-family 'Kaushan Script', cursive
+        line-height 31px
+        height 31px
+        font-size 16px
+        padding-right 894px
+        text-align center
+        text-transform lowercase
+        margin 0px
+    h2
+        background-color rgba(203, 197, 190, 0.047)
+        margin 0px
+        font-family 'Kaushan Script', cursive
+        text-align center
+        font-size 16px
+        line-height 25px
+    p
+        background-color rgba(203, 197, 190, 0.047)
+        margin 0px
+        text-align center
+        line-height 25px
+        height 50px
+
+section#browse
+    h1:nth-of-type(1)
+        background-image url('../images/content-top.png')
+        font-family 'Kaushan Script', cursive
+        line-height 31px
+        height 31px
+        font-size 16px
+        padding-right 894px
+        text-align center
+        text-transform lowercase
+        margin 0px
+    p:nth-of-type(1)
+        float right
+        position relative
+        top -30px
+        font-size 12px
+        background-image url('../images/add.png')
+        background-repeat no-repeat
+        background-position center right
+        padding-right 20px
+        a
+            color #cbc5be
+            text-decoration none
+            border-bottom 1px solid #cbc5be
+        a:hover
+            color #ffffff
+            border-bottom 1px solid #ffffff
