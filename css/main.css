@@ -15,12 +15,17 @@ header aside{content:'';min-height:20px;position:absolute;left:0;width:100%;back
 header aside:before{content:'';position:absolute;z-index:-1;top:0;left:0;right:0;bottom:-2px;border-bottom:1px solid #141210}
 section#intro{clear:both;}
 section#intro h1{background-image:url("../images/intro-top.png");font-family:'Kaushan Script',cursive;line-height:31px;height:31px;font-size:16px;padding-right:894px;text-align:center;text-transform:lowercase;margin:0}
-section#intro h2{background-color:rgba(203,197,190,0.047);margin:0;font-family:'Kaushan Script',cursive;text-align:center;font-size:16px;line-height:25px}
+section#intro h2{background-color:rgba(203,197,190,0.047);margin:0;font-family:'Kaushan Script',cursive;text-align:center;font-size:16px;line-height:25px;font-weight:normal}
 section#intro p{background-color:rgba(203,197,190,0.047);margin:0;text-align:center;line-height:25px;height:50px}
+section#browse{text-align:center;}
 section#browse h1:nth-of-type(1){background-image:url("../images/content-top.png");font-family:'Kaushan Script',cursive;line-height:31px;height:31px;font-size:16px;padding-right:894px;text-align:center;text-transform:lowercase;margin:0}
 section#browse p:nth-of-type(1){float:right;position:relative;top:-30px;font-size:12px;background-image:url("../images/add.png");background-repeat:no-repeat;background-position:center right;padding-right:20px;}
 section#browse p:nth-of-type(1) a{color:#cbc5be;text-decoration:none;border-bottom:1px solid #cbc5be}
 section#browse p:nth-of-type(1) a:hover{color:#fff;border-bottom:1px solid #fff}
+section#browse h1:nth-of-type(2){text-align:center;margin:0;font-family:'Kaushan Script',cursive;text-align:center;font-size:16px;line-height:25px;font-weight:normal}
+section#browse p:last-child{display:inline-block;position:relative;font-size:12px;background-image:url("../images/add.png");background-repeat:no-repeat;background-position:center right;padding-right:20px;}
+section#browse p:last-child a{color:#cbc5be;text-decoration:none;border-bottom:1px solid #cbc5be}
+section#browse p:last-child a:hover{color:#fff;border-bottom:1px solid #fff}
 section#browse>ul:nth-of-type(1){padding:0;}
 section#browse>ul:nth-of-type(1) li{list-style-type:none;width:222px;}
 section#browse>ul:nth-of-type(1) li h2{text-align:center;font-size:12px;font-weight:normal}
