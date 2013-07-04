@@ -37,6 +37,11 @@ section#browse>ul:nth-of-type(1) li ul:after{content:'';position:absolute;z-inde
 section#browse>ul:nth-of-type(1) li>div{position:absolute;width:100%;background-color:rgba(203,197,190,0.6);height:30px;line-height:30px;color:#eee;text-shadow:0 1px 1px #000,0 0 10px #000;}
 section#browse>ul:nth-of-type(1) li>div a:first-child{display:inline-block;width:16px;height:16px;background:url("../images/heart.png");text-indent:100%;white-space:nowrap;overflow:hidden;margin-left:5px;margin-right:5px;float:left;height:100%;background-position:center center;background-repeat:no-repeat}
 section#browse>ul:nth-of-type(1) li>div a:last-child{display:inline-block;width:16px;height:16px;background:url("../images/share.png");text-indent:100%;white-space:nowrap;overflow:hidden;float:right;height:100%;background-position:center center;background-repeat:no-repeat;margin-right:5px}
+footer{text-align:center;color:#686259;font-size:12px;background-image:url("../images/footer.png");background-position:top center;background-repeat:no-repeat;padding-top:30px;margin-top:30px;padding-bottom:30px;}
+footer h1{font-family:'Kaushan Script',cursive;font-size:12px;font-weight:normal}
+footer p{font-size:10px;}
+footer p a{color:#666;text-decoration:none;border-bottom:1px solid #666}
+footer p a:hover{color:#fff;border-bottom:1px solid #fff}
 .ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}
 .ir:before{content:"";display:block;width:0;height:100%}
 .hidden{display:none !important;visibility:hidden}
