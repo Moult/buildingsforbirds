@@ -93,6 +93,126 @@ section#intro
         line-height 25px
         height 50px
 
+section.single
+    h2
+        font-size 16px
+        font-family 'Kaushan Script', cursive
+        font-weight normal
+        clear both
+        margin-bottom 20px
+    div
+        width 100%
+        position absolute
+        min-width 100%
+        left 0px
+        background url('../images/foo.png') no-repeat center center fixed
+        -webkit-background-size cover
+        -moz-background-size cover
+        -o-background-size cover
+        background-size cover
+        img
+            boxshadow(30px, #000000)
+            margin 50px
+            clear both
+        div
+            z-index 30
+            text-align left
+            position relative
+            margin-left auto
+            margin-right auto
+            margin-top -80px
+            width 474px
+            max-width 474px
+            min-width 474px
+            background-color #cbc5be
+            background-image none
+            height 30px
+            line-height 30px
+            color #222222
+            text-shadow 0px 1px 1px #eeeeee, 0px 0px 10px #000000
+            a:first-child
+                display inline-block
+                width 16px
+                height 16px
+                background url('../images/heart.png')
+                text-indent 100%
+                white-space nowrap
+                overflow hidden
+                margin-left 5px
+                margin-right 5px
+                float left
+                height 100%
+                background-position center center
+                background-repeat no-repeat
+            a:last-child
+                display inline-block
+                width 16px
+                height 16px
+                background url('../images/share.png')
+                text-indent 100%
+                white-space nowrap
+                overflow hidden
+                float right
+                height 100%
+                background-position center center
+                background-repeat no-repeat
+                margin-right 5px
+        p
+            color #222
+            line-height normal
+        p:nth-of-type(1)
+            top 0px !important
+        ul
+            list-style-type none
+            padding 0px
+            li
+                overflow hidden
+                position relative
+                text-align left
+                margin-bottom 20px
+                background-color #cbc5be
+                -webkit-border-radius 5px
+                border-radius 5px
+                padding 10px
+                width 454px
+                margin-left auto
+                margin-right auto
+                p
+                    width 434px
+                    float left
+                    margin 0px
+                    font-size 12px
+                a
+                    display inline-block
+                    width 16px
+                    height 16px
+                    background url('../images/heart.png')
+                    text-indent 100%
+                    white-space nowrap
+                    overflow hidden
+                    float right
+                    background-position center center
+                    background-repeat no-repeat
+
+section.single>footer
+    border 1px solid #F00
+    z-index 20
+section#browse>p:nth-of-type(1)
+    float right
+    position relative
+    top -30px
+    font-size 12px
+    background-image url('../images/add.png')
+    background-repeat no-repeat
+    background-position center right
+    padding-right 20px
+    a
+        color #cbc5be
+        text-decoration none
+        border-bottom 1px solid #cbc5be
+    a:hover
+        color #ffffff
+        border-bottom 1px solid #ffffff
 section#browse
     text-align center
     h1:nth-of-type(1)
@@ -105,22 +225,6 @@ section#browse
         text-align center
         text-transform lowercase
         margin 0px
-    p:nth-of-type(1)
-        float right
-        position relative
-        top -30px
-        font-size 12px
-        background-image url('../images/add.png')
-        background-repeat no-repeat
-        background-position center right
-        padding-right 20px
-        a
-            color #cbc5be
-            text-decoration none
-            border-bottom 1px solid #cbc5be
-        a:hover
-            color #ffffff
-            border-bottom 1px solid #ffffff
     h1:nth-of-type(2)
         text-align center
         margin 0px
@@ -196,6 +300,7 @@ section#browse>ul:nth-of-type(1)
                 -webkit-border-radius 5px
                 border-radius 5px
         li>div
+            text-align left
             position absolute
             width 100%
             background-color rgba(203, 197, 190, 0.6)
