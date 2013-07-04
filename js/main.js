@@ -4,3 +4,5 @@ var msnry = new Masonry(container, {
     gutter: 30,
     itemSelector: 'section#browse>ul:nth-of-type(1)>li'
 });
+
+$("section.single").css("height", ($("section.single div").height() + 130) + "px");
