@@ -21,6 +21,8 @@ section#browse h1:nth-of-type(1){background-image:url("../images/content-top.png
 section#browse p:nth-of-type(1){float:right;position:relative;top:-30px;font-size:12px;background-image:url("../images/add.png");background-repeat:no-repeat;background-position:center right;padding-right:20px;}
 section#browse p:nth-of-type(1) a{color:#cbc5be;text-decoration:none;border-bottom:1px solid #cbc5be}
 section#browse p:nth-of-type(1) a:hover{color:#fff;border-bottom:1px solid #fff}
+section#browse>ul:nth-of-type(1){padding:0;}
+section#browse>ul:nth-of-type(1) li{list-style-type:none;width:222px}
 .ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}
 .ir:before{content:"";display:block;width:0;height:100%}
 .hidden{display:none !important;visibility:hidden}
