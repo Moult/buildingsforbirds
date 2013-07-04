@@ -27,10 +27,10 @@ section#browse p:last-child{display:inline-block;position:relative;font-size:12p
 section#browse p:last-child a{color:#cbc5be;text-decoration:none;border-bottom:1px solid #cbc5be}
 section#browse p:last-child a:hover{color:#fff;border-bottom:1px solid #fff}
 section#browse>ul:nth-of-type(1){padding:0;}
-section#browse>ul:nth-of-type(1) li{list-style-type:none;width:222px;}
+section#browse>ul:nth-of-type(1) li{list-style-type:none;width:222px;margin-bottom:10px;}
 section#browse>ul:nth-of-type(1) li h2{text-align:center;font-size:12px;font-weight:normal}
-section#browse>ul:nth-of-type(1) li ul{background-color:#a6a19b;-webkit-border-radius:5px;border-radius:5px;color:#222;position:relative;z-index:1;padding:0;}
-section#browse>ul:nth-of-type(1) li ul li{background-image:url("../images/comment-divider.png");background-position:bottom left;background-repeat:no-repeat;padding:5px;font-size:11px;line-height:20px}
+section#browse>ul:nth-of-type(1) li ul{background-color:#a6a19b;-webkit-border-radius:5px;border-radius:5px;color:#222;position:relative;z-index:1;padding:0;margin-top:-3px;}
+section#browse>ul:nth-of-type(1) li ul li{text-align:left;background-image:url("../images/comment-divider.png");background-position:bottom left;background-repeat:no-repeat;padding:5px;font-size:11px;margin-bottom:0;line-height:20px}
 section#browse>ul:nth-of-type(1) li ul li:last-child{background-image:none}
 section#browse>ul:nth-of-type(1) li ul:before{content:'';position:absolute;z-index:-1;top:-9px;left:10px;right:0;width:11px;height:11px;background-image:url("../images/comment-arrow.png")}
 section#browse>ul:nth-of-type(1) li ul:after{content:'';position:absolute;z-index:-1;top:0;left:0;right:0;bottom:-1px;border-bottom:1px solid #000;-webkit-border-radius:5px;border-radius:5px}
