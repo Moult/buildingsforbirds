@@ -79,9 +79,9 @@ Feature: Image
         And there is dummy data loaded as follows:
             | 42 | Foo | /tmp/foo.png |
             | 43 | Bar | /tmp/bar.png |
-        Then the "section#browse>ul>li:nth-child(1) div" element should contain "0"
+        Then the "section#browse>ul>li:nth-child(1) div span" element should contain "0"
         When I follow "Love this building"
-        Then the "section#browse>ul>li:nth-child(1) div" element should contain "1"
+        Then the "section#browse>ul>li:nth-child(1) div span" element should contain "1"
         When I follow "Foo"
         Then the "section#browse div" element should contain "1"
 
