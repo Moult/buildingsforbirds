@@ -11,9 +11,9 @@
     <div>
         <img src="{{baseurl}}{{file}}" alt="Building">
         <div>
-            <a href="#" rel="{{id}}">Love this building</a>
+            <a href="#vote" rel="{{id}}">Love this building</a>
             <span>{{votes}}</span>
-            <a href="#">Share with friends</a>
+            <a href="#share">Share with friends</a>
         </div>
         <p>
             Social sharing
@@ -22,8 +22,8 @@
         <ul>
             {{#comments}}
             <li>
-                {{comment}}
-                <a href="#" rel="{{id}}">Vote up</a>
+                {{{comment}}}
+                <a href="#vote" rel="{{id}}">Vote up</a>
             </li>
             {{/comments}}
         </ul>

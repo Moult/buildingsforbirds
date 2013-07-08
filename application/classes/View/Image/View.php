@@ -48,7 +48,7 @@ class View_Image_View extends View_Layout
         {
             $array[] = array(
                 'id' => $comment->id,
-                'comment' => $comment->message
+                'comment' => Text::auto_p($comment->message)
             );
         }
         return $array;

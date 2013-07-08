@@ -3,7 +3,7 @@
         Browse
     </h1>
     <p>
-        <a href="#">Add a render</a>
+        <a href="#add">Add a render</a>
         <form action="" method="post" enctype="multipart/form-data">
             <label for="name">Name:</label> <input type="text" name="name">
             <label for="building">Image:</label> <input type="file" name="building">
@@ -14,9 +14,9 @@
         {{#images}}
         <li>
             <div>
-                <a href="#" rel="{{id}}">Love this building</a>
+                <a href="#vote" rel="{{id}}">Love this building</a>
                 <span>{{votes}}</span>
-                <a href="#">Share with friends</a>
+                <a href="#share">Share with friends</a>
             </div>
             <a href="{{baseurl}}view/{{id}}/">
                 <img src="{{file}}" alt="{{name}}">
@@ -41,8 +41,5 @@
     </h1>
     <p>
         Uh oh! We've run out of Buildings for Birds.
-    </p>
-    <p>
-        <a href="#">Add a render</a>
     </p>
 </section>

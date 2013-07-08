@@ -102,6 +102,25 @@ section#intro
         height 50px
 
 section.single
+    form
+        display block !important
+        background-color #141210
+        width 434px
+        margin-left auto
+        margin-right auto
+        padding 20px
+        margin-bottom 30px
+        boxshadow(15px, rgba(0, 0, 0, 0.5))
+        -webkit-border-radius 5px
+        border-radius 5px
+        textarea
+            width 300px
+            background-color rgba(203, 197, 190, 0.047)
+            border 1px solid rgba(203, 197, 190, 0.5)
+            -webkit-border-radius 5px
+            border-radius 5px
+            color #cbc5be
+            padding 5px
     h2
         font-size 16px
         font-family 'Kaushan Script', cursive
@@ -180,17 +199,20 @@ section.single
                 background-color #cbc5be
                 -webkit-border-radius 5px
                 border-radius 5px
-                padding 10px
-                width 454px
+                width 474px
                 margin-left auto
                 margin-right auto
                 p
+                    color #222
                     width 434px
                     float left
-                    margin 0px
+                    margin 10px
                     font-size 12px
                 a
                     display inline-block
+                    position absolute
+                    top 10px
+                    right 10px
                     width 16px
                     height 16px
                     background url('../images/heart.png')
@@ -224,6 +246,13 @@ section#browse
     text-align center
     form
         display none
+        input
+            background-color rgba(203, 197, 190, 0.047)
+            border 1px solid rgba(203, 197, 190, 0.5)
+            -webkit-border-radius 5px
+            border-radius 5px
+            color #cbc5be
+            padding 5px
     h1:nth-of-type(1)
         background-image url('../images/content-top.png')
         font-family 'Kaushan Script', cursive
@@ -242,21 +271,6 @@ section#browse
         font-size 16px
         line-height 25px
         font-weight normal
-    p:last-child
-        display inline-block
-        position relative
-        font-size 12px
-        background-image url('../images/add.png')
-        background-repeat no-repeat
-        background-position center right
-        padding-right 20px
-        a
-            color #cbc5be
-            text-decoration none
-            border-bottom 1px solid #cbc5be
-        a:hover
-            color #ffffff
-            border-bottom 1px solid #ffffff
 section#browse>ul:nth-of-type(1)
         padding 0px
         li
