@@ -4,3 +4,6 @@
 [submodule "modules/kostache"]
 	path = modules/kostache
 	url = git://github.com/zombor/KOstache.git
+[submodule "application/vendor/Cavis/Core"]
+	path = application/vendor/Cavis/Core
+	url = https://github.com/Moult/cavis.git
