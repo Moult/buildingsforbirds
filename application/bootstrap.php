@@ -120,7 +120,7 @@ Kohana::modules(array(
     // 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
        'kostache'   => MODPATH.'kostache',   // Mustache templating
        'errorpage'  => MODPATH.'errorpage',  // Display custom 404 error pages
-       'driver'     => MODPATH.'driver',     // Base set of drivers
+    // 'driver'     => MODPATH.'driver',     // Base set of drivers
     // 'cms'        => MODPATH.'cms',        // CMS editor for template files
     ));
 
