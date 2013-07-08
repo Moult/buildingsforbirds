@@ -20,6 +20,11 @@ function imagevote(element, image) {
     }).done(function(status) {
         if (status.substr(0, 7) === "success") {
             element.html(parseInt(element.html()) + 1);
+            element.parent().find("a:nth-child(1)").css("background-image", "url('" + baseurl + "images/tick.png')");
+        }
+        else
+        {
+            element.parent().find("a:nth-child(1)").css("background-image", "url('" + baseurl + "images/tick-already.png')");
         }
     });
 }
@@ -34,13 +39,18 @@ $("section.single div>a:nth-child(1)").click(function() {
 
 $("section.single div ul li a").click(function() {
     comment = $(this).attr('rel');
+    element = $(this);
     $.ajax({
         cache: false,
         url: baseurl + "comment/vote/" + comment
     }).done(function(status) {
         if (status.substr(0, 7) === "success") {
-            // TODO
+            element.css("background-image", "url('" + baseurl + "images/tick.png')");
         }
-    });
+        else
+        {
+            element.css("background-image", "url('" + baseurl + "images/tick-already.png')");
+        }
 
+    });
 });
