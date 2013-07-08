@@ -195,26 +195,4 @@ class FeatureContext extends Behat\MinkExtension\Context\MinkContext
         );
 
     }
-
-    //public function theElementShouldContainMyUploadedImage($arg1)
-    //{
-
-    //}
-
-    //public function theElementShouldNotBeMoreThanPixels($arg1, $arg2)
-    //{
-        //throw new PendingException();
-    //}
-
-//
-// Place your definition and hook methods here:
-//
-//    /**
-//     * @Given /^I have done something with "([^"]*)"$/
-//     */
-//    public function iHaveDoneSomethingWith($argument)
-//    {
-//        doSomethingWith($argument);
-//    }
-//
 }
