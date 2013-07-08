@@ -1,25 +1,11 @@
 <?php
 /**
- * vtemplate
- *
  * @license MIT
+ * Full license text in LICENSE file
  */
 
-defined('SYSPATH') OR die('No direct script access.');
-
-/**
- * Shows static base pages of the website.
- */
 class Controller_Static extends Controller_Core
 {
-    /**
-     * Homepage of website.
-     *
-     * @return void
-     */
-    public function action_homepage()
-    {}
-
     /**
      * Autoloads view templates which don't have a specific route setup
      *
