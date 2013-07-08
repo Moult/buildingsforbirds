@@ -6,4 +6,4 @@
 	url = git://github.com/zombor/KOstache.git
 [submodule "application/vendor/Cavis/Core"]
 	path = application/vendor/Cavis/Core
-	url = git@github.com:Moult/cavis.git
+	url = git://github.com:Moult/cavis.git
