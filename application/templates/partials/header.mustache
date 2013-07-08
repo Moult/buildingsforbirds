@@ -25,15 +25,17 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        <header>
-            <h1>
-                Buildings for Birds
-            </h1>
+        <header {{#has_notification}}class="notification"{{/has_notification}}>
+            <a href="{{baseurl}}">
+                <h1>
+                    Buildings for Birds
+                </h1>
+            </a>
             <div>
                 Social buttons
             </div>
             <aside>
-                Notification text can go here.
+                {{notification}}
             </aside>
         </header>
         <section id="intro">
