@@ -46,7 +46,7 @@ header
         margin-top 30px
         float right
     aside
-        content ''
+        text-align center
         min-height 20px
         position absolute
         left 0px
@@ -65,6 +65,14 @@ header
         right 0px
         bottom -2px
         border-bottom 1px solid #141210
+header.notification
+    h1
+        margin-top 60px
+    div
+        margin-top 60px
+    aside
+        min-height 50px
+        line-height 50px
 
 section#intro
     clear both
@@ -120,12 +128,11 @@ section.single
             position relative
             margin-left auto
             margin-right auto
-            margin-top -80px
             width 474px
             max-width 474px
             min-width 474px
-            background-color #cbc5be
-            background-image none
+            background-color #cbc5be !important
+            background-image none !important
             height 30px
             line-height 30px
             color #222222
@@ -215,6 +222,8 @@ section#browse>p:nth-of-type(1)
         border-bottom 1px solid #ffffff
 section#browse
     text-align center
+    form
+        display none
     h1:nth-of-type(1)
         background-image url('../images/content-top.png')
         font-family 'Kaushan Script', cursive

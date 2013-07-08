@@ -112,15 +112,15 @@ Kohana::modules(array(
     // 'auth'       => MODPATH.'auth',       // Basic authentication
     // 'cache'      => MODPATH.'cache',      // Caching with multiple backends
     // 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-    // 'database'   => MODPATH.'database',   // Database access
-    // 'image'      => MODPATH.'image',      // Image manipulation
+       'database'   => MODPATH.'database',   // Database access
+       'image'      => MODPATH.'image',      // Image manipulation
     // 'minion'     => MODPATH.'minion',     // CLI Tasks
     // 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
     // 'unittest'   => MODPATH.'unittest',   // Unit testing
     // 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
        'kostache'   => MODPATH.'kostache',   // Mustache templating
        'errorpage'  => MODPATH.'errorpage',  // Display custom 404 error pages
-    // 'driver'     => MODPATH.'driver',     // Base set of drivers
+       'driver'     => MODPATH.'driver',     // Base set of drivers
     // 'cms'        => MODPATH.'cms',        // CMS editor for template files
     ));
 
@@ -130,8 +130,38 @@ Kohana::modules(array(
  */
 Route::set('homepage', '')
     ->defaults(array(
-        'controller' => 'static',
-        'action'     => 'homepage',
+        'controller' => 'image',
+        'action'     => 'browse',
+    ));
+
+Route::set('view', 'view/<image_id>', array('image_id' => '[0-9]*'))
+    ->defaults(array(
+        'controller' => 'image',
+        'action'     => 'view'
+    ));
+
+Route::set('image vote', 'image/vote/<image_id>', array('image_id' => '[0-9]*'))
+    ->defaults(array(
+        'controller' => 'image',
+        'action'     => 'vote'
+    ));
+
+Route::set('image delete', 'image/delete/<image_id>/<password>', array('image_id' => '[0-9]*', 'password' => '.*'))
+    ->defaults(array(
+        'controller' => 'image',
+        'action'     => 'delete'
+    ));
+
+Route::set('comment delete', 'comment/delete/<comment_id>/<password>', array('comment_id' => '[0-9]*', 'password' => '.*'))
+    ->defaults(array(
+        'controller' => 'comment',
+        'action'     => 'delete'
+    ));
+
+Route::set('comment vote', 'comment/vote/<comment_id>', array('comment_id' => '[0-9]*'))
+    ->defaults(array(
+        'controller' => 'comment',
+        'action'     => 'vote'
     ));
 
 /**
