@@ -3,5 +3,7 @@ default:
     Behat\MinkExtension\Extension:
       show_cmd: opera-next %s
       base_url: http://localhost/buildingsforbirds
+      browser_name: chrome
       goutte: ~
       selenium2: ~
+      sahi: ~
