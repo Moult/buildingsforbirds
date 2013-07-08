@@ -23,6 +23,8 @@
         <exec command="mkdir ${builddir}/deploy/modules/" passthru="true" />
         <exec command="cp -r modules/kostache ${builddir}/deploy/modules/" passthru="true" />
         <exec command="cp -r modules/errorpage ${builddir}/deploy/modules/" passthru="true" />
+        <exec command="cp -r modules/database ${builddir}/deploy/modules/" passthru="true" />
+        <exec command="cp -r modules/image ${builddir}/deploy/modules/" passthru="true" />
         <exec command="cp -r system/ ${builddir}/deploy/" passthru="true" />
         <exec command="cp -r robots.txt ${builddir}/deploy/" passthru="true" />
         <exec command="cp -r crossdomain.xml ${builddir}/deploy/" passthru="true" />
@@ -36,6 +38,12 @@
         <exec command="mv ${builddir}/deploy/js/*.min.js ${builddir}" passthru="true" />
         <exec command="rm ${builddir}/deploy/js/*.js" passthru="true" />
         <exec command="mv ${builddir}/*.min.js ${builddir}/deploy/js/" passthru="true" />
+        <exec command="mv ${builddir}/deploy/application/vendor/Cavis/Core/src/ ${builddir}/src" passthru="true" />
+        <exec command="rm -rf ${builddir}/deploy/application/vendor/Cavis/Core/*" passthru="true" />
+        <exec command="mv ${builddir}/src ${builddir}/deploy/application/vendor/Cavis/Core/src/" passthru="true" />
+
+        <!-- Make necessary folders -->
+        <exec command="mkdir ${builddir}/deploy/uploads" passthru="true" />
 
         <!-- Configure for live site -->
         <exec command="sed -i 's/\/buildingsforbirds\//\//g' ${builddir}/deploy/application/bootstrap.php" passthru="true" />
