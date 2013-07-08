@@ -19,33 +19,36 @@ class Repository_Image_Browse implements Cavis\Core\Usecase\Image\Browse\Reposit
      */
     public function get_snapshot_of_latest_images()
     {
-        //SET @num := 0, @image := '';
         $sql = <<<EOT
-SELECT `t1`.`id`, `t1`.`name`, `t1`.`file`, `t1`.`votes`, `t2`.`comments`
-FROM (
-
-SELECT `i`.`id`, `i`.`name`, `i`.`file`, COUNT(`iv`.`ip`) AS `votes`
-FROM `images` AS `i` LEFT JOIN `imagevotes` AS `iv`
-ON `i`.`id`=`iv`.`image` GROUP BY `i`.`id`
-
-) AS t1 LEFT JOIN (
-
-SELECT image, GROUP_CONCAT(message SEPARATOR '|') AS comments FROM (
-SELECT image, message, votes,
-      @num := if(@image = image, @num + 1, 1) AS row_number,
-      @image := image as dummy
-FROM (
-SELECT `c`.`image`, `c`.`message`, COUNT(`cv`.`ip`) AS `votes` FROM `comments` AS `c`, `commentvotes` AS `cv` WHERE `c`.`id`=`cv`.`comment` GROUP BY `cv`.`comment`
-) AS x GROUP BY image, message, votes
-HAVING row_number <= 3
-ORDER BY votes DESC
-) AS z GROUP BY image
-
-) AS t2
-ON `t1`.`id`=`t2`.`image`
-ORDER BY `t1`.`votes` DESC
+select t1.id, t1.name, t1.file, t1.votes, t2.comments
+from (
+    select i.id, i.name, i.file, count(iv.ip) as votes
+    from images as i
+    left join imagevotes as iv
+    on i.id=iv.image
+    group by i.id
+) as t1 left join (
+    select image, group_concat(message separator '|') as comments
+    from (
+        select image, message, votes,
+            @num := if(@image = image, @num + 1, 1) as row_number,
+            @image := image as dummy
+        from (
+            select c.message, c.image, count(cv.ip) as votes
+            from comments as c, commentvotes as cv
+            where c.id = cv.comment
+            group by cv.comment
+        ) as x
+        group by image, message, votes
+        having row_number <= 3
+        order by votes desc
+    ) as y group by image
+) as t2
+on t1.id=t2.image
+order by t1.votes desc
 EOT;
 
+        DB::query(NULL, 'set @num := 0, @image := \'\'')->execute();
         $query = DB::query(Database::SELECT, $sql)->execute();
         $image_array = array();
         foreach ($query as $row)
