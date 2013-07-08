@@ -1,0 +1,38 @@
+<section id="browse" class="single">
+    <h1>
+        View
+    </h1>
+    <p>
+    <a href="{{baseurl}}">View all</a>
+    </p>
+    <h2>
+        {{building_name}}
+    </h2>
+    <div>
+        <img src="{{baseurl}}{{file}}" alt="Building">
+        <div>
+            <a href="#" rel="{{id}}">Love this building</a>
+            <span>{{votes}}</span>
+            <a href="#">Share with friends</a>
+        </div>
+        <p>
+            Social sharing
+        </p>
+        {{#has_comments}}
+        <ul>
+            {{#comments}}
+            <li>
+                {{comment}}
+                <a href="#" rel="{{id}}">Vote up</a>
+            </li>
+            {{/comments}}
+        </ul>
+        {{/has_comments}}
+
+        <form action="" method="post">
+            <label for="message">Comment</label>
+            <textarea name="message"></textarea>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+</section>
