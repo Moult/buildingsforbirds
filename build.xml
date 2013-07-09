@@ -61,9 +61,9 @@
 
     <target name="deploy" description="Build and deploy latest software">
         <phingcall target="build" />
-        <exec command="mv ../public_html/ ../previous_stage/" passthru="true" />
-        <exec command="mv ${builddir}/deploy/ ../public_html/" passthru="true" />
-        <exec command="rm -rf ../previous_stage/" passthru="true" />
+        <exec command="rm -rf ${builddir}/deploy/application/config/" passthru="true" />
+        <exec command="rm -rf ${builddir}/deploy/uploads/" passthru="true" />
+        <exec command="rsync -a ${builddir}/deploy/ /var/www/localhost/alpha/buildingsforbirds/" passthru="true" />
     </target>
     
     <target name="package" description="Build and package for distribution">
