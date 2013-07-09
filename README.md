@@ -6,7 +6,7 @@ Some buildings were just meant for birds.
 
  1. `git submodule update --init --recursive`
  2. Verify `RewriteBase /` in `.htaccess`
- 3. Verify `application/logs/` and `application/cache/` are writeable
+ 3. Verify `application/logs/`, `application/cache/`, and `uploads/` are writeable
  4. Configure everything in `application/config/*`
  5. Configure `application/bootstrap.php`
 
