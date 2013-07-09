@@ -75,10 +75,10 @@ Feature: Image
 
     @mink:sahi
     Scenario: Vote on an existing render from the browse page
-        Given I am on the homepage
-        And there is dummy data loaded as follows:
+        Given there is dummy data loaded as follows:
             | 42 | Foo | /tmp/foo.png |
             | 43 | Bar | /tmp/bar.png |
+        And I am on the homepage
         Then the "section#browse>ul>li:nth-child(1) div span" element should contain "0"
         When I follow "Love this building"
         Then the "section#browse>ul>li:nth-child(1) div span" element should contain "1"
