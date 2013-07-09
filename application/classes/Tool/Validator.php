@@ -11,7 +11,6 @@ class Tool_Validator implements Cavis\Core\Tool\Validator
      * @var Validation
      */
     private $instance;
-    private $upload_instance = NULL;
 
     /**
      * Loads in the input data from the user that you want to perform validation
@@ -23,21 +22,9 @@ class Tool_Validator implements Cavis\Core\Tool\Validator
      *
      * @param array $input_data
      * @return void
-     */    public function setup(array $input_data)
+     */
+    public function setup(array $input_data)
     {
-        //foreach ($input_data as $key => $data)
-        //{
-            //if (is_array($data)
-                //AND array_key_exists('name', $data)
-                //AND array_key_exists('tmp_name', $data)
-                //AND array_key_exists('type', $data)
-                //AND array_key_exists('size', $data)
-                //AND array_key_exists('error', $data))
-            //{
-                //$this->upload_instance = Validation::factory($data);
-                //unset($data[$key]);
-            //}
-        //}
         $this->instance = Validation::factory($input_data);
     }
 
@@ -125,10 +112,7 @@ class Tool_Validator implements Cavis\Core\Tool\Validator
      */
     public function check()
     {
-        if ($this->upload_instance !== NULL)
-            return $this->upload_instance->check() AND $this->instance->check();
-        else
-            return $this->instance->check();
+        return $this->instance->check();
     }
 
     /**
@@ -148,6 +132,4 @@ class Tool_Validator implements Cavis\Core\Tool\Validator
         }
         return $errors;
     }
-
-
 }
